@@ -48,7 +48,6 @@ private:
 
 public:
 	static void performinjection() {
-		std::cout << "[info] Runnning perm-check...";
 		SetAccessControl(bindStr, L"S-1-15-2-1");
 		Inject(path);
 	}
