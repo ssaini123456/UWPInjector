@@ -24,6 +24,7 @@
     <ProjectGuid>{48141a88-4f29-4ecb-8bdb-1ee470316484}</ProjectGuid>
     <RootNamespace>SynClient</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>SynInjector</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
