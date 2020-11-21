@@ -10,8 +10,8 @@ std::wstring bindStr(&path[0], &path[pathsize]);
 
 class Injector {
 private:
-	static DWORD GetPid() {
-		DWORD currId = 0;
+	static uint32_t GetPid() {
+		uint32_t currId = 0;
 		const std::wstring& winName = L"Minecraft.Windows.exe";
 		HANDLE snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
 		if (snapshot != INVALID_HANDLE_VALUE) {
@@ -31,7 +31,7 @@ private:
 	}
 
 	static int Inject(const char* path) {
-		DWORD pId = GetPid();
+		uint32_t pId = GetPid();
 		HANDLE procHandle = OpenProcess(PROCESS_ALL_ACCESS, 0, pId);
 		if (procHandle && procHandle != INVALID_HANDLE_VALUE) {
 			void* allocatedBytes = VirtualAllocEx(procHandle, 0, MAX_PATH, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
