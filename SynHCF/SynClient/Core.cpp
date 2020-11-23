@@ -1,7 +1,7 @@
 #include <Windows.h>
 
 DWORD WINAPI MainThread(LPVOID lpvoid) {
-
+    //AllocConsole(); don't work
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved) {
