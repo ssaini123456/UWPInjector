@@ -5,6 +5,7 @@
 #include "Permission.h"
 
 const char* path = ""; //note:edit this when the final product is ready
+const std::wstring& winName = "";
 size_t pathsize = strlen(path);
 std::wstring bindStr(&path[0], &path[pathsize]);
 
@@ -12,7 +13,6 @@ class Injector {
 private:
 	static uint32_t GetPid() {
 		uint32_t currId = 0;
-		const std::wstring& winName = L"Minecraft.Windows.exe";
 		HANDLE snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
 		if (snapshot != INVALID_HANDLE_VALUE) {
 			PROCESSENTRY32 pEntry;
